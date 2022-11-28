@@ -1,7 +1,13 @@
+import React, { useReducer, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
     <div className="App">
       <body>
@@ -9,8 +15,8 @@ function App() {
           <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container">
               <a href="#" class="navbar-brand d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                <strong>Hello la zone</strong>
+                <img src ="logo.png" alt="My Happy SVG" id="logo"/>
+                <strong>S E X E, JM LE S E XE</strong>
               </a>
             </div>
           </div>
@@ -42,11 +48,14 @@ function App() {
                     <div class="card-body">
                       <p class="card-text">Ceci est la phrase lol</p>
                       <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Boutton 1</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Boutton 2</button>
-                        </div>
-                        <small class="text-muted">Anecdote</small>
+                        <form class="row g-3" onSubmit={handleSubmit}>
+                          <div class="col-auto">
+                            <input name="name" class="form-control form-control-sm" type="text" placeholder="mmmhh?"/>
+                          </div>
+                          <div class="col-auto">
+                            <button type="submit" class="btn btn-sm btn-outline-secondary">Allez tente !</button>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -173,8 +182,8 @@ function App() {
                       <p class="card-text">Ceci est la phrase lol</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Boutton 1</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Boutton 2</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Bouton 1</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Bouton 2</button>
                         </div>
                         <small class="text-muted">Anecdote</small>
                       </div>
@@ -189,9 +198,9 @@ function App() {
         <footer class="text-muted py-5">
           <div class="container">
             <p class="float-end mb-1">
-              Que du love bébé
+            <img src="lol.jpg" id="img_footer" alt="..."></img>
             </p>
-            <p class="mb-1">Fait par société à capital</p>
+            <p class="mb-1">Copyright S.A.S immatriculé 235.658.345 à Paris. Vous pouvez UNIQUEMENT payer en nature. Toute triche sera sanctionnée de 3 fessées. Chaque rire sera sanctionnée 2 bisous. Pas de rouge à lèvres et coupez vous les ongles, merci.</p>
           </div>
         </footer>
       </body>
